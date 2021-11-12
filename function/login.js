@@ -121,7 +121,22 @@ document.getElementById('button').addEventListener('click',function(){
     }
 
     if(verif == true){
+        obj = {
+            name : userName,
+            last : lastName,
+            Email:email,
+            dateDay:day,
+            dateMonth:month,
+            dateYear:year
+        }
+        const fs = require("fs");
+        let usersjson = fs.readFileSync("users.json","utf-8");
+        let users = JSON.parse(usersjson);
+        users.push(obj);
+        usersjson = JSON.stringify(users);
+        fs.writeFileSync("users.json",usersjson,"utf-8");
         window.location.href = "passwordcreate.html"
+
     }
 })
 
