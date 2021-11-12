@@ -69,6 +69,46 @@ document.getElementById('button').addEventListener('click',function(){
         alert("email do not match")
     }
 
+
+    test6 = true
+    if (test == true){
+        if ((day< '1' || day> '31')){
+            test6 = false
+            verif = false
+        }
+        
+    }
+
+    if(test6 == false){
+        alert("day is uncorrect")
+    }
+
+    num = ['1', '2', '3', '4', '5', '6', '7', '8', '9' ,'10' ,'11' ,'12']
+
+    test7 = true
+    if (test == true){
+        if (num.includes(month) == false){
+            test7 = false
+            verif = false
+        }
+    }
+
+    if(test7 == false){
+        alert("month is uncorrect")
+    }
+
+
+    test8 = true
+    if (test == true){
+        if ((year< '1960' || year> '2010')){
+            test8 = false
+            verif = false
+        }
+    }
+
+    if(test8 == false){
+        alert("year is uncorrect")
+    }
     
 
 })
